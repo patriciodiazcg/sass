@@ -1,13 +1,18 @@
 
+@mixin images ($width, $heigh) {
+    width: $width;
+    height: $heigh;
+    object-fit: cover;
+}
+
+
 .about {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     &__img {
         img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
+            @include images (100%,auto);
         }
     }
     &__texto {
